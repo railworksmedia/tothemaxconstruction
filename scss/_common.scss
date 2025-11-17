@@ -12,16 +12,30 @@ body {
     color: $color-text-dark;
     line-height: 1.6;
     background-color: $color-bg-white;
+    
+    // Fixed background image
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url('../images/backgroundmain.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
 }
 
 // Header Styles
 header {
-    background-color: $color-bg-dark;
+    background-color: transparent;
     padding: $spacing-sm $spacing-md;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
     nav {
         display: flex;
@@ -58,6 +72,7 @@ header {
 // Main Content
 main {
     min-height: calc(100vh - 200px);
+    position: relative;
 }
 
 // Footer Styles
