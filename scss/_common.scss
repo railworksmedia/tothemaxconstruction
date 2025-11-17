@@ -1,0 +1,86 @@
+@use 'variables' as *;
+
+// Reset and Base Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-text-dark;
+    line-height: 1.6;
+    background-color: $color-bg-white;
+}
+
+// Header Styles
+header {
+    background-color: $color-bg-dark;
+    padding: $spacing-sm $spacing-md;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .logo h1 {
+            color: $color-text-white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: $spacing-md;
+
+            li a {
+                color: $color-text-white;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $color-link-hover;
+                }
+            }
+        }
+    }
+}
+
+// Main Content
+main {
+    min-height: calc(100vh - 200px);
+}
+
+// Footer Styles
+footer {
+    background-color: $color-bg-dark;
+    color: $color-text-white;
+    text-align: center;
+    padding: $spacing-md;
+    margin-top: $spacing-xl;
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+// Responsive Design
+@media (max-width: $breakpoint-tablet) {
+    header nav {
+        flex-direction: column;
+        gap: $spacing-sm;
+
+        .nav-links {
+            gap: $spacing-sm;
+        }
+    }
+}

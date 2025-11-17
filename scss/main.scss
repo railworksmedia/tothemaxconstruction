@@ -1,0 +1,46 @@
+@use 'variables' as *;
+@use 'common';
+@use 'about';
+@use 'contact';
+
+// Home page specific styles
+
+// Services Section
+.services-section {
+    background-color: $color-bg-dark;
+    color: $color-text-white;
+    padding: $spacing-xl $spacing-md;
+
+    .services-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        gap: $spacing-lg;
+        justify-content: space-between;
+
+        .service-item {
+            flex: 1;
+            text-align: center;
+
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: $spacing-sm;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: $color-text-white;
+            }
+        }
+    }
+
+    // Responsive Design
+    @media (max-width: $breakpoint-tablet) {
+        .services-container {
+            flex-direction: column;
+            gap: $spacing-md;
+        }
+    }
+}
