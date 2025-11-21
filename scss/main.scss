@@ -17,6 +17,12 @@
     padding-left: $spacing-xl;
     padding-right: $spacing-xl;
 
+    .hero-wrapper {
+        display: flex;
+        align-items: flex-end;
+        gap: $spacing-md;
+    }
+
     .hero-content {
         text-align: left;
         color: $color-text-white;
@@ -48,11 +54,35 @@
         }
     }
 
+    .hero-phone-cta {
+        background-color: $color-mandarin;
+        color: $color-text-white;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: $spacing-xs $spacing-sm;
+        border: 4px solid $color-text-white;
+        outline: 4px solid $color-mandarin;
+        border-radius: 6px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        white-space: nowrap;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
     @media (max-width: $breakpoint-tablet) {
         margin-top: -30px;
         padding-left: $spacing-md;
         padding-right: $spacing-md;
         justify-content: center;
+
+        .hero-wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .hero-content {
             text-align: center;
@@ -70,6 +100,11 @@
             .service-area {
                 font-size: 0.85rem;
             }
+        }
+
+        .hero-phone-cta {
+            margin-top: $spacing-sm;
+            font-size: 1rem;
         }
     }
 }

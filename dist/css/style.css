@@ -155,6 +155,11 @@ footer p {
   padding-left: 4rem;
   padding-right: 4rem;
 }
+.hero-section .hero-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+}
 .hero-section .hero-content {
   text-align: left;
   color: #FFFFFF;
@@ -182,12 +187,33 @@ footer p {
   margin-top: 2rem;
   opacity: 0.9;
 }
+.hero-section .hero-phone-cta {
+  background-color: #d85c27;
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 4px solid #FFFFFF;
+  outline: 4px solid #d85c27;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+.hero-section .hero-phone-cta:hover {
+  transform: scale(1.05);
+}
 @media (max-width: 768px) {
   .hero-section {
     margin-top: -30px;
     padding-left: 2rem;
     padding-right: 2rem;
     justify-content: center;
+  }
+  .hero-section .hero-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
   .hero-section .hero-content {
     text-align: center;
@@ -202,6 +228,10 @@ footer p {
   }
   .hero-section .hero-content .service-area {
     font-size: 0.85rem;
+  }
+  .hero-section .hero-phone-cta {
+    margin-top: 1rem;
+    font-size: 1rem;
   }
 }
 
