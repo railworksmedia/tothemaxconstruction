@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'variables' as *;
 @use 'common';
 
@@ -47,10 +48,10 @@
     padding: $spacing-xl $spacing-md;
 
     .contact-container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: $spacing-lg;
 
         .contact-card {
@@ -81,7 +82,7 @@
                 transition: color 0.3s ease;
 
                 &:hover {
-                    color: darken($color-mandarin, 10%);
+                    color: color.adjust($color-mandarin, $lightness: -10%);
                 }
             }
 

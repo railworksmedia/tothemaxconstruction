@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'variables' as *;
 
 // Reset and Base Styles
@@ -152,6 +153,23 @@ footer {
         font-weight: 600;
         margin: $spacing-sm 0;
         color: $color-text-white;
+    }
+
+    .email-address {
+        font-size: 1rem;
+        margin: $spacing-sm 0;
+        color: $color-text-white;
+
+        a {
+            color: $color-mandarin;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: color.adjust($color-mandarin, $lightness: 10%);
+            }
+        }
     }
 
     p {
