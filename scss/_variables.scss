@@ -1,12 +1,23 @@
 // Font Variables
 $font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-// Color Variables
+// Color Variables - Brand Palette
+$color-mauve: #A96762;
+$color-deep-blue: #2F5C8F;
+$color-mandarin: #d85c27;
+$color-lavender: #b999be;
+$color-night-moon: #14365d;
+
+// Background Colors
 $color-bg-white: #FFFFFF;
-$color-bg-dark: #212121;
+$color-bg-dark: $color-night-moon;
 $color-bg-tertiary: #f9f6ef;
-$color-link: #191919;
-$color-link-hover: #191919;
+
+// Link and Button Colors
+$color-link: $color-mandarin;
+$color-link-hover: darken($color-mandarin, 10%);
+
+// Text Colors
 $color-text-dark: #000000;
 $color-text-white: #FFFFFF;
 

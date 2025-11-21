@@ -7,42 +7,55 @@
 
 // Hero Section
 .hero-section {
-    min-height: calc(100vh - 80px); // Account for header height
+    min-height: calc(100vh - 60px); // Account for smaller header height
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: transparent;
     position: relative;
+    margin-top: -40px; // Pull section up for better centering
+    padding-left: $spacing-xl;
+    padding-right: $spacing-xl;
 
     .hero-content {
-        text-align: center;
+        text-align: left;
         color: $color-text-white;
         padding: $spacing-xl;
-        max-width: 800px;
-
-        p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            margin-bottom: $spacing-sm;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
+        max-width: 700px;
+        background: linear-gradient(to right, rgba(20, 54, 93, 0.95), rgba(20, 54, 93, 0.7));
+        border-radius: 8px;
 
         h1 {
             font-size: 3rem;
             font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            line-height: 1.2;
+            line-height: 1.3;
+            margin-bottom: $spacing-md;
+        }
+
+        p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.6;
         }
     }
 
     @media (max-width: $breakpoint-tablet) {
+        margin-top: -30px;
+        padding-left: $spacing-md;
+        padding-right: $spacing-md;
+        justify-content: center;
+
         .hero-content {
-            p {
-                font-size: 1rem;
-            }
+            text-align: center;
+            padding: $spacing-md;
 
             h1 {
                 font-size: 2rem;
+                margin-bottom: $spacing-sm;
+            }
+
+            p {
+                font-size: 1rem;
             }
         }
     }
@@ -76,11 +89,19 @@
                 padding-left: 0;
             }
 
+            .service-icon {
+                width: 80px;
+                height: 80px;
+                margin: 0 auto $spacing-xs auto;
+                display: block;
+            }
+
             h2 {
                 font-size: 0.95rem;
                 margin-bottom: $spacing-xs;
                 font-weight: 600;
                 letter-spacing: 0.5px;
+                text-align: center;
             }
 
             p {
@@ -225,6 +246,209 @@
 
                 img {
                     height: 400px;
+                }
+            }
+        }
+    }
+}
+
+// Complete Home Renovation Section
+.renovation-section {
+    background-color: $color-bg-white;
+    padding: $spacing-xl $spacing-md;
+
+    .renovation-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: $spacing-lg;
+            color: $color-text-dark;
+            font-weight: 600;
+        }
+
+        .renovation-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: $spacing-md $spacing-xl;
+
+            li {
+                font-size: 1.1rem;
+                color: $color-text-dark;
+                font-weight: 400;
+                position: relative;
+                padding-left: $spacing-md;
+
+                &::before {
+                    content: '•';
+                    position: absolute;
+                    left: 0;
+                    color: $color-mandarin;
+                    font-size: 1.5rem;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        .renovation-container {
+            .renovation-list {
+                flex-direction: column;
+                align-items: center;
+                gap: $spacing-sm;
+
+                li {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+// Call to Action Section
+.cta-section {
+    background-color: $color-night-moon;
+    padding: $spacing-xl $spacing-md;
+
+    .cta-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .cta-box {
+            background-color: $color-mandarin;
+            color: $color-text-white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: $spacing-sm $spacing-md;
+            border: 4px solid $color-text-white;
+            outline: 4px solid $color-mandarin;
+            border-radius: 6px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        .cta-container {
+            .cta-box {
+                font-size: 1rem;
+                padding: $spacing-xs $spacing-sm;
+            }
+        }
+    }
+}
+
+// Yelp Reviews Section
+.reviews-section {
+    background-color: $color-bg-tertiary;
+    padding: $spacing-xl $spacing-md;
+
+    .reviews-container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .reviews-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: $spacing-sm;
+            margin-bottom: $spacing-xl;
+
+            .yelp-link {
+                display: flex;
+                align-items: center;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                .yelp-icon {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+
+            h2 {
+                font-size: 2rem;
+                color: $color-text-dark;
+                font-weight: 600;
+                margin: 0;
+            }
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: $spacing-md;
+
+            .review-card {
+                background-color: $color-bg-white;
+                padding: $spacing-md;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                }
+
+                .review-header {
+                    width: 140px;
+                    height: auto;
+                    margin-bottom: $spacing-sm;
+                    border-radius: 4px;
+                    display: block;
+                }
+
+                .review-text {
+                    font-size: 0.85rem;
+                    line-height: 1.6;
+                    color: $color-text-dark;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-desktop) {
+        .reviews-container {
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        .reviews-container {
+            .reviews-header {
+                .yelp-icon {
+                    width: 36px;
+                    height: 36px;
+                }
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: $spacing-md;
+
+                .review-card {
+                    .review-header {
+                        width: 120px;
+                    }
                 }
             }
         }
