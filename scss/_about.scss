@@ -74,6 +74,15 @@
                 padding-bottom: $spacing-xs;
             }
 
+            .max-garcia-image {
+                height: 2in;
+                width: auto;
+                border-radius: 8px;
+                margin-bottom: $spacing-md;
+                margin-left: $spacing-md;
+                float: right;
+            }
+
             p {
                 font-size: 1.05rem;
                 line-height: 1.8;

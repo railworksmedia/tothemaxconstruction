@@ -86,6 +86,25 @@
             margin-top: $spacing-md;
             opacity: 0.9;
         }
+
+        .hero-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: $spacing-md;
+            margin-top: $spacing-md;
+
+            .service-area {
+                margin-top: 0;
+            }
+
+            .license {
+                font-size: 0.95rem;
+                font-weight: 400;
+                opacity: 0.9;
+                margin: 0;
+            }
+        }
     }
 
     .hero-phone-cta {

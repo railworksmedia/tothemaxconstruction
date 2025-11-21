@@ -219,6 +219,14 @@ footer p {
   border-bottom: 3px solid #d85c27;
   padding-bottom: 0.5rem;
 }
+.about-content .about-container .about-card .max-garcia-image {
+  height: 2in;
+  width: auto;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  float: right;
+}
 .about-content .about-container .about-card p {
   font-size: 1.05rem;
   line-height: 1.8;
@@ -290,6 +298,11 @@ footer p {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-info .contact-container .contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .contact-info .contact-container .contact-card h2 {
   font-size: 1.5rem;
@@ -408,6 +421,22 @@ footer p {
   font-style: italic;
   margin-top: 2rem;
   opacity: 0.9;
+}
+.hero-section .hero-content .hero-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.hero-section .hero-content .hero-footer .service-area {
+  margin-top: 0;
+}
+.hero-section .hero-content .hero-footer .license {
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin: 0;
 }
 .hero-section .hero-phone-cta {
   background-color: #d85c27;
