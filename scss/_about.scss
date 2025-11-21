@@ -43,30 +43,63 @@
 
 // About Content Section
 .about-content {
-    background-color: $color-bg-white;
+    background-color: $color-bg-tertiary;
     padding: $spacing-xl $spacing-md;
 
     .about-container {
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-lg;
 
-        h2 {
-            font-size: 1.8rem;
-            color: $color-text-dark;
-            font-weight: 600;
-            margin-top: $spacing-lg;
-            margin-bottom: $spacing-md;
+        .about-card {
+            background-color: $color-bg-white;
+            padding: $spacing-lg;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-            &:first-child {
-                margin-top: 0;
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             }
-        }
 
-        p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: $color-text-dark;
-            margin-bottom: $spacing-md;
+            h2 {
+                font-size: 1.8rem;
+                color: $color-text-dark;
+                font-weight: 600;
+                margin-bottom: $spacing-md;
+                border-bottom: 3px solid $color-mandarin;
+                padding-bottom: $spacing-xs;
+            }
+
+            p {
+                font-size: 1.05rem;
+                line-height: 1.8;
+                color: $color-text-dark;
+                margin-bottom: $spacing-md;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            ul {
+                margin: $spacing-md 0;
+                padding-left: $spacing-md;
+
+                li {
+                    font-size: 1.05rem;
+                    line-height: 1.8;
+                    color: $color-text-dark;
+                    margin-bottom: $spacing-sm;
+
+                    strong {
+                        color: $color-mandarin;
+                    }
+                }
+            }
         }
     }
 }

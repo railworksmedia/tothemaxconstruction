@@ -176,28 +176,56 @@ footer p {
 }
 
 .about-content {
-  background-color: #FFFFFF;
+  background-color: #f9f6ef;
   padding: 4rem 2rem;
 }
 .about-content .about-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
-.about-content .about-container h2 {
+.about-content .about-container .about-card {
+  background-color: #FFFFFF;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-content .about-container .about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.about-content .about-container .about-card h2 {
   font-size: 1.8rem;
   color: #000000;
   font-weight: 600;
-  margin-top: 3rem;
   margin-bottom: 2rem;
+  border-bottom: 3px solid #d85c27;
+  padding-bottom: 0.5rem;
 }
-.about-content .about-container h2:first-child {
-  margin-top: 0;
-}
-.about-content .about-container p {
-  font-size: 1.1rem;
+.about-content .about-container .about-card p {
+  font-size: 1.05rem;
   line-height: 1.8;
   color: #000000;
   margin-bottom: 2rem;
+}
+.about-content .about-container .about-card p:last-child {
+  margin-bottom: 0;
+}
+.about-content .about-container .about-card ul {
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+.about-content .about-container .about-card ul li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+.about-content .about-container .about-card ul li strong {
+  color: #d85c27;
 }
 
 .contact-hero {
