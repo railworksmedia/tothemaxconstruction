@@ -336,6 +336,36 @@ footer p {
   }
 }
 
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .hero-section {
   min-height: calc(100vh - 60px);
   display: flex;
@@ -610,14 +640,15 @@ footer p {
   justify-content: center;
   gap: 2rem 4rem;
 }
-.renovation-section .renovation-container .renovation-list li {
+.renovation-section .renovation-container .renovation-list .renovation-item {
   font-size: 1.1rem;
   color: #000000;
   font-weight: 400;
   position: relative;
   padding-left: 2rem;
+  opacity: 0;
 }
-.renovation-section .renovation-container .renovation-list li::before {
+.renovation-section .renovation-container .renovation-list .renovation-item::before {
   content: "•";
   position: absolute;
   left: 0;
@@ -803,6 +834,20 @@ footer p {
   .hgtv-section .hgtv-container .hgtv-logo {
     height: 60px;
   }
+}
+
+.animate-slide-left {
+  opacity: 0;
+}
+.animate-slide-left.in-view {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+  opacity: 0;
+}
+.animate-slide-right.in-view {
+  animation: slideInFromRight 0.8s ease-out forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,40 @@
 @use 'about';
 @use 'contact';
 
+// Animations
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 // Home page specific styles
 
 // Hero Section
@@ -325,12 +359,13 @@
             justify-content: center;
             gap: $spacing-md $spacing-xl;
 
-            li {
+            .renovation-item {
                 font-size: 1.1rem;
                 color: $color-text-dark;
                 font-weight: 400;
                 position: relative;
                 padding-left: $spacing-md;
+                opacity: 0;
 
                 &::before {
                     content: '•';
@@ -565,5 +600,22 @@
                 height: 60px;
             }
         }
+    }
+}
+
+// Animation trigger classes
+.animate-slide-left {
+    opacity: 0;
+    
+    &.in-view {
+        animation: slideInFromLeft 0.8s ease-out forwards;
+    }
+}
+
+.animate-slide-right {
+    opacity: 0;
+    
+    &.in-view {
+        animation: slideInFromRight 0.8s ease-out forwards;
     }
 }
