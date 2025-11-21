@@ -36,6 +36,15 @@
             font-size: 1.1rem;
             font-weight: 300;
             line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .service-area {
+            font-size: 0.95rem;
+            font-weight: 400;
+            font-style: italic;
+            margin-top: $spacing-md;
+            opacity: 0.9;
         }
     }
 
@@ -56,6 +65,10 @@
 
             p {
                 font-size: 1rem;
+            }
+
+            .service-area {
+                font-size: 0.85rem;
             }
         }
     }

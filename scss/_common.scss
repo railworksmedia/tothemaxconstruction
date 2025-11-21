@@ -46,10 +46,50 @@ header {
         padding: $spacing-xs $spacing-md;
         border-radius: 12px;
 
-        .logo h1 {
-            color: $color-text-dark;
-            font-size: 1.2rem;
-            font-weight: 700;
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.1rem;
+
+            .logo-header {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                .logo-image {
+                    height: 1.2rem;
+                    width: auto;
+                }
+
+                h1 {
+                    color: $color-text-dark;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    margin: 0;
+                }
+            }
+
+            .social-icons {
+                display: flex;
+                gap: $spacing-sm;
+
+                .social-link {
+                    display: flex;
+                    align-items: center;
+                    transition: transform 0.3s ease;
+                    padding: $spacing-xs;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    .social-icon {
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+            }
         }
 
         .nav-links {
@@ -60,7 +100,7 @@ header {
             li a {
                 color: $color-text-dark;
                 text-decoration: none;
-                font-size: 0.9rem;
+                font-size: 1.1rem;
                 font-weight: 500;
                 transition: color 0.3s ease;
 
@@ -84,10 +124,39 @@ footer {
     color: $color-text-white;
     text-align: center;
     padding: $spacing-md;
-    margin-top: $spacing-xl;
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: $spacing-md;
+        margin-bottom: $spacing-sm;
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+
+            .social-icon {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+
+    .phone-number {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: $spacing-sm 0;
+        color: $color-text-white;
+    }
 
     p {
         font-size: 0.9rem;
+        margin: 0;
     }
 }
 
