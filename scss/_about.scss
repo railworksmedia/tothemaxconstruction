@@ -1,4 +1,72 @@
 @use 'variables' as *;
 @use 'common';
 
-// About page specific styles will be added here
+// About page specific styles
+
+// About Hero Section
+.about-hero {
+    background-color: $color-night-moon;
+    padding: $spacing-xl * 2 $spacing-md;
+    text-align: center;
+
+    .about-hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        color: $color-text-white;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: $spacing-md;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        padding: $spacing-xl $spacing-md;
+
+        .about-hero-content {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+// About Content Section
+.about-content {
+    background-color: $color-bg-white;
+    padding: $spacing-xl $spacing-md;
+
+    .about-container {
+        max-width: 800px;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 1.8rem;
+            color: $color-text-dark;
+            font-weight: 600;
+            margin-top: $spacing-lg;
+            margin-bottom: $spacing-md;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: $color-text-dark;
+            margin-bottom: $spacing-md;
+        }
+    }
+}

@@ -144,6 +144,156 @@ footer p {
     gap: 1rem;
   }
 }
+.about-hero {
+  background-color: #14365d;
+  padding: 8rem 2rem;
+  text-align: center;
+}
+.about-hero .about-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #FFFFFF;
+}
+.about-hero .about-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.about-hero .about-hero-content p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 4rem 2rem;
+  }
+  .about-hero .about-hero-content h1 {
+    font-size: 2rem;
+  }
+  .about-hero .about-hero-content p {
+    font-size: 1rem;
+  }
+}
+
+.about-content {
+  background-color: #FFFFFF;
+  padding: 4rem 2rem;
+}
+.about-content .about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about-content .about-container h2 {
+  font-size: 1.8rem;
+  color: #000000;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.about-content .about-container h2:first-child {
+  margin-top: 0;
+}
+.about-content .about-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+
+.contact-hero {
+  background-color: #14365d;
+  padding: 8rem 2rem;
+  text-align: center;
+}
+.contact-hero .contact-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #FFFFFF;
+}
+.contact-hero .contact-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.contact-hero .contact-hero-content p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 4rem 2rem;
+  }
+  .contact-hero .contact-hero-content h1 {
+    font-size: 2rem;
+  }
+  .contact-hero .contact-hero-content p {
+    font-size: 1rem;
+  }
+}
+
+.contact-info {
+  background-color: #FFFFFF;
+  padding: 4rem 2rem;
+}
+.contact-info .contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.contact-info .contact-container .contact-card {
+  background-color: #FFFFFF;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.contact-info .contact-container .contact-card h2 {
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.contact-info .contact-container .contact-card p {
+  font-size: 1.1rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+.contact-info .contact-container .contact-card .contact-link {
+  color: #d85c27;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+.contact-info .contact-container .contact-card .contact-link:hover {
+  color: rgb(172.8, 73.6, 31.2);
+}
+.contact-info .contact-container .contact-card .contact-note {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic;
+}
+.contact-info .contact-container .contact-card .contact-social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.contact-info .contact-container .contact-card .contact-social a {
+  transition: transform 0.3s ease;
+}
+.contact-info .contact-container .contact-card .contact-social a:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .contact-info .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 .hero-section {
   min-height: calc(100vh - 60px);
   display: flex;

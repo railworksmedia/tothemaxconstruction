@@ -1,4 +1,117 @@
 @use 'variables' as *;
 @use 'common';
 
-// Contact page specific styles will be added here
+// Contact page specific styles
+
+// Contact Hero Section
+.contact-hero {
+    background-color: $color-night-moon;
+    padding: $spacing-xl * 2 $spacing-md;
+    text-align: center;
+
+    .contact-hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        color: $color-text-white;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: $spacing-md;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        padding: $spacing-xl $spacing-md;
+
+        .contact-hero-content {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+// Contact Information Section
+.contact-info {
+    background-color: $color-bg-white;
+    padding: $spacing-xl $spacing-md;
+
+    .contact-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $spacing-lg;
+
+        .contact-card {
+            background-color: $color-bg-white;
+            padding: $spacing-lg;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+
+            h2 {
+                font-size: 1.5rem;
+                color: $color-text-dark;
+                font-weight: 600;
+                margin-bottom: $spacing-md;
+            }
+
+            p {
+                font-size: 1.1rem;
+                color: $color-text-dark;
+                margin-bottom: $spacing-sm;
+            }
+
+            .contact-link {
+                color: $color-mandarin;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 1.3rem;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: darken($color-mandarin, 10%);
+                }
+            }
+
+            .contact-note {
+                font-size: 0.9rem;
+                color: rgba(0, 0, 0, 0.6);
+                font-style: italic;
+            }
+
+            .contact-social {
+                display: flex;
+                justify-content: center;
+                gap: $spacing-md;
+                margin-top: $spacing-sm;
+
+                a {
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        .contact-container {
+            grid-template-columns: 1fr;
+            gap: $spacing-md;
+        }
+    }
+}
