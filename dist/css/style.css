@@ -291,6 +291,7 @@ footer p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
+  padding: 0 1rem;
 }
 .contact-info .contact-container .contact-card {
   background-color: #FFFFFF;

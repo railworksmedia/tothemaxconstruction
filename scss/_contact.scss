@@ -53,6 +53,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: $spacing-lg;
+        padding: 0 $spacing-sm;
 
         .contact-card {
             background-color: $color-bg-white;
