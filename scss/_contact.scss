@@ -86,8 +86,10 @@
                 color: $color-mandarin;
                 text-decoration: none;
                 font-weight: 600;
-                font-size: 1.3rem;
+                font-size: 1.1rem;
                 transition: color 0.3s ease;
+                word-break: break-word;
+                overflow-wrap: break-word;
 
                 &:hover {
                     color: color.adjust($color-mandarin, $lightness: -10%);
@@ -121,6 +123,19 @@
         .contact-container {
             grid-template-columns: 1fr;
             gap: $spacing-md;
+            padding: 0;
+
+            .contact-card {
+                padding: $spacing-sm;
+
+                p {
+                    font-size: 1rem;
+                }
+
+                .contact-link {
+                    font-size: 1rem;
+                }
+            }
         }
     }
 }
