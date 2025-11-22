@@ -321,8 +321,10 @@ footer p {
   color: #d85c27;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 .contact-info .contact-container .contact-card .contact-link:hover {
   color: rgb(172.8, 73.6, 31.2);
@@ -348,6 +350,16 @@ footer p {
   .contact-info .contact-container {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 0;
+  }
+  .contact-info .contact-container .contact-card {
+    padding: 1rem;
+  }
+  .contact-info .contact-container .contact-card p {
+    font-size: 1rem;
+  }
+  .contact-info .contact-container .contact-card .contact-link {
+    font-size: 1rem;
   }
 }
 
@@ -385,17 +397,19 @@ footer p {
   min-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: transparent;
   position: relative;
   margin-top: -40px;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .hero-section .hero-wrapper {
   display: flex;
   align-items: flex-end;
   gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
 }
 .hero-section .hero-content {
   text-align: left;
