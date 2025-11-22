@@ -45,7 +45,7 @@
 // Contact Information Section
 .contact-info {
     background-color: $color-bg-white;
-    padding: $spacing-xl $spacing-md;
+    padding: $spacing-lg $spacing-md;
 
     .contact-container {
         max-width: 1200px;
@@ -57,11 +57,12 @@
 
         .contact-card {
             background-color: $color-bg-white;
-            padding: $spacing-lg;
+            padding: $spacing-md;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-width: 0;
 
             &:hover {
                 transform: translateY(-4px);
@@ -69,10 +70,10 @@
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 color: $color-text-dark;
                 font-weight: 600;
-                margin-bottom: $spacing-md;
+                margin-bottom: $spacing-sm;
             }
 
             p {

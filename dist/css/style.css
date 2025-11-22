@@ -283,7 +283,7 @@ footer p {
 
 .contact-info {
   background-color: #FFFFFF;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
 }
 .contact-info .contact-container {
   max-width: 1200px;
@@ -295,21 +295,22 @@ footer p {
 }
 .contact-info .contact-container .contact-card {
   background-color: #FFFFFF;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 0;
 }
 .contact-info .contact-container .contact-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .contact-info .contact-container .contact-card h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #000000;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .contact-info .contact-container .contact-card p {
   font-size: 1.1rem;
