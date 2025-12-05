@@ -176,7 +176,7 @@
 
 // Services Section
 .services-section {
-    background: linear-gradient(135deg, $color-bg-soft 0%, $color-bg-subtle 100%);
+    background: linear-gradient(135deg, $color-bg-soft 0%, $color-bg-white 100%);
     color: $color-text-dark;
     padding: $spacing-xl $spacing-md;
     position: relative;
@@ -252,6 +252,18 @@
 .image-text-section {
     background-color: $color-bg-white;
     padding: $spacing-xl $spacing-md;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: $color-accent-gold;
+    }
 
     .image-text-container {
         max-width: 1200px;
@@ -267,7 +279,8 @@
                 width: 100%;
                 height: auto;
                 display: block;
-                border-radius: 4px;
+                border-radius: 12px;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
             }
         }
 

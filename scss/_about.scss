@@ -43,8 +43,20 @@
 
 // About Content Section
 .about-content {
-    background-color: $color-bg-soft;
+    background: linear-gradient(135deg, $color-bg-soft 0%, $color-bg-white 100%);
     padding: $spacing-xl $spacing-md;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: $color-accent-gold;
+    }
 
     .about-container {
         max-width: 900px;
@@ -56,13 +68,14 @@
         .about-card {
             background-color: $color-bg-white;
             padding: $spacing-lg;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid $color-accent-gold;
 
             &:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                transform: translateY(-8px);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
             }
 
             h2 {
@@ -70,8 +83,7 @@
                 color: $color-text-dark;
                 font-weight: 600;
                 margin-bottom: $spacing-md;
-                border-bottom: 3px solid $color-accent-gold;
-                padding-bottom: $spacing-xs;
+                margin-top: 0;
             }
 
             .max-garcia-image {

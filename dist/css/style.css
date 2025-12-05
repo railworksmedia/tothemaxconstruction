@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #1A1A1A;
@@ -207,8 +211,19 @@ footer p {
 }
 
 .about-content {
-  background-color: #FAFAFA;
+  background: linear-gradient(135deg, #FAFAFA 0%, #FFFFFF 100%);
   padding: 4rem 2rem;
+  position: relative;
+}
+.about-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #D4AF37;
 }
 .about-content .about-container {
   max-width: 900px;
@@ -220,21 +235,21 @@ footer p {
 .about-content .about-container .about-card {
   background-color: #FFFFFF;
   padding: 3rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #D4AF37;
 }
 .about-content .about-container .about-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 .about-content .about-container .about-card h2 {
   font-size: 1.8rem;
   color: #1A1A1A;
   font-weight: 600;
   margin-bottom: 2rem;
-  border-bottom: 3px solid #D4AF37;
-  padding-bottom: 0.5rem;
+  margin-top: 0;
 }
 .about-content .about-container .about-card .max-garcia-image {
   height: 2in;
@@ -299,8 +314,19 @@ footer p {
 }
 
 .contact-info {
-  background-color: #FAFAFA;
+  background: linear-gradient(135deg, #FAFAFA 0%, #FFFFFF 100%);
   padding: 3rem 2rem;
+  position: relative;
+}
+.contact-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #D4AF37;
 }
 .contact-info .contact-container {
   max-width: 1200px;
@@ -313,15 +339,16 @@ footer p {
 .contact-info .contact-container .contact-card {
   background-color: #FFFFFF;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   min-width: 0;
+  border-top: 4px solid #D4AF37;
 }
 .contact-info .contact-container .contact-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 .contact-info .contact-container .contact-card h2 {
   font-size: 1.3rem;
@@ -530,7 +557,7 @@ footer p {
 }
 
 .services-section {
-  background: linear-gradient(135deg, #FAFAFA 0%, #F2F2F2 100%);
+  background: linear-gradient(135deg, #FAFAFA 0%, #FFFFFF 100%);
   color: #1A1A1A;
   padding: 4rem 2rem;
   position: relative;
@@ -595,6 +622,17 @@ footer p {
 .image-text-section {
   background-color: #FFFFFF;
   padding: 4rem 2rem;
+  position: relative;
+}
+.image-text-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #D4AF37;
 }
 .image-text-section .image-text-container {
   max-width: 1200px;
@@ -610,7 +648,8 @@ footer p {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 .image-text-section .image-text-container .text-column {
   flex: 1;
