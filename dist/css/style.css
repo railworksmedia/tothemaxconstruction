@@ -299,7 +299,7 @@ footer p {
 }
 
 .contact-info {
-  background-color: #FFFFFF;
+  background-color: #FAFAFA;
   padding: 3rem 2rem;
 }
 .contact-info .contact-container {
@@ -1026,6 +1026,60 @@ footer p {
   .project-categories-section .project-categories-container .category-item {
     max-width: 100%;
     width: 100%;
+  }
+}
+
+.full-width-image-section {
+  width: 100%;
+  overflow: hidden;
+}
+.full-width-image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-ethic-section {
+  background-color: #FAFAFA;
+  padding: 4rem 2rem;
+}
+.work-ethic-section .work-ethic-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.work-ethic-section .work-ethic-content .accent-line {
+  width: 60px;
+  height: 4px;
+  background-color: #D4AF37;
+  margin-bottom: 2rem;
+}
+.work-ethic-section .work-ethic-content h2 {
+  font-size: 2rem;
+  color: #2D2D2D;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  letter-spacing: -0.5px;
+}
+.work-ethic-section .work-ethic-content p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #757575;
+  margin-bottom: 3rem;
+}
+.work-ethic-section .work-ethic-content p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .work-ethic-section {
+    padding: 3rem 2rem;
+  }
+  .work-ethic-section .work-ethic-content h2 {
+    font-size: 1.5rem;
+  }
+  .work-ethic-section .work-ethic-content p {
+    font-size: 1rem;
+    line-height: 1.8;
   }
 }
 

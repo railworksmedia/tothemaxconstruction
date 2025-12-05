@@ -775,3 +775,70 @@
         }
     }
 }
+
+// Full Width Image Section
+.full-width-image-section {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+// Work Ethic Section
+.work-ethic-section {
+    background-color: $color-bg-soft;
+    padding: $spacing-xl $spacing-md;
+
+    .work-ethic-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .work-ethic-content {
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background-color: $color-accent-gold;
+            margin-bottom: $spacing-md;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: $color-primary-gray;
+            font-weight: 700;
+            margin-bottom: $spacing-md;
+            margin-top: 0;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: $color-text-muted;
+            margin-bottom: $spacing-lg;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        padding: $spacing-lg $spacing-md;
+
+        .work-ethic-content {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+        }
+    }
+}
