@@ -27,7 +27,7 @@ body::before {
 
 header {
   background-color: rgba(45, 45, 45, 0.85);
-  padding: 1rem 2rem;
+  padding: 0.35rem 2rem;
   position: relative;
   z-index: 1000;
   border-bottom: 1px solid rgba(212, 175, 55, 0.1);
@@ -39,7 +39,7 @@ header nav {
   max-width: 1200px;
   margin: 0 auto;
   background-color: transparent;
-  padding: 0.5rem 2rem;
+  padding: 0.25rem 2rem;
   border-radius: 12px;
 }
 header nav .logo {
@@ -58,7 +58,7 @@ header nav .logo .logo-header .logo-image {
   width: auto;
 }
 header nav .logo .logo-header h1 {
-  color: #D4AF37;
+  color: #FFFFFF;
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0;
@@ -927,7 +927,7 @@ footer p {
 
 .logo-section {
   background-color: #000000;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem 0.5rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -936,7 +936,7 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0;
   max-width: 400px;
 }
 .logo-section .logo-container .logo-tagline {
@@ -949,7 +949,7 @@ footer p {
   order: -1;
 }
 .logo-section .logo-container .section-logo {
-  height: 150px;
+  height: 250px;
   width: auto;
   object-fit: contain;
 }
@@ -958,7 +958,7 @@ footer p {
     gap: 1rem;
   }
   .logo-section .logo-container .section-logo {
-    height: 100px;
+    height: 180px;
   }
   .logo-section .logo-container .logo-tagline {
     font-size: 1rem;

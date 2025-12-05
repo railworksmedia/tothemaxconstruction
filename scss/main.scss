@@ -656,7 +656,7 @@
 // Logo Section
 .logo-section {
     background-color: #000000;
-    padding: $spacing-xl $spacing-md;
+    padding: $spacing-md $spacing-md $spacing-xs $spacing-md;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -665,7 +665,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: $spacing-sm;
+        gap: 0;
         max-width: 400px;
 
         .logo-tagline {
@@ -679,7 +679,7 @@
         }
 
         .section-logo {
-            height: 150px;
+            height: 250px;
             width: auto;
             object-fit: contain;
         }
@@ -690,7 +690,7 @@
             gap: $spacing-sm;
 
             .section-logo {
-                height: 100px;
+                height: 180px;
             }
 
             .logo-tagline {

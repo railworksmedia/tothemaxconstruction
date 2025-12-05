@@ -33,7 +33,7 @@ body {
 // Header Styles
 header {
     background-color: rgba($color-primary-gray, 0.85);
-    padding: $spacing-sm $spacing-md;
+    padding: 0.35rem $spacing-md;
     position: relative;
     z-index: 1000;
     border-bottom: 1px solid rgba($color-accent-gold, 0.1);
@@ -45,7 +45,7 @@ header {
         max-width: 1200px;
         margin: 0 auto;
         background-color: transparent;
-        padding: $spacing-xs $spacing-md;
+        padding: 0.25rem $spacing-md;
         border-radius: 12px;
 
         .logo {
@@ -65,7 +65,7 @@ header {
                 }
 
                 h1 {
-                    color: $color-accent-gold;
+                    color: $color-text-light;
                     font-size: 1.2rem;
                     font-weight: 700;
                     margin: 0;
