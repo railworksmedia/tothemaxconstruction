@@ -5,14 +5,14 @@
 
 // About Hero Section
 .about-hero {
-    background-color: $color-night-moon;
+    background-color: $color-primary-gray;
     padding: $spacing-xl * 2 $spacing-md;
     text-align: center;
 
     .about-hero-content {
         max-width: 800px;
         margin: 0 auto;
-        color: $color-text-white;
+        color: $color-text-light;
 
         h1 {
             font-size: 3rem;
@@ -43,7 +43,7 @@
 
 // About Content Section
 .about-content {
-    background-color: $color-bg-tertiary;
+    background-color: $color-bg-soft;
     padding: $spacing-xl $spacing-md;
 
     .about-container {
@@ -70,7 +70,7 @@
                 color: $color-text-dark;
                 font-weight: 600;
                 margin-bottom: $spacing-md;
-                border-bottom: 3px solid $color-mandarin;
+                border-bottom: 3px solid $color-accent-gold;
                 padding-bottom: $spacing-xs;
             }
 
@@ -105,7 +105,7 @@
                     margin-bottom: $spacing-sm;
 
                     strong {
-                        color: $color-mandarin;
+                        color: $color-accent-gold;
                     }
                 }
             }

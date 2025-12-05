@@ -32,10 +32,11 @@ body {
 
 // Header Styles
 header {
-    background-color: transparent;
-    padding: $spacing-xs $spacing-md;
+    background-color: rgba($color-primary-gray, 0.85);
+    padding: $spacing-sm $spacing-md;
     position: relative;
     z-index: 1000;
+    border-bottom: 1px solid rgba($color-accent-gold, 0.1);
 
     nav {
         display: flex;
@@ -64,10 +65,11 @@ header {
                 }
 
                 h1 {
-                    color: $color-text-dark;
+                    color: $color-accent-gold;
                     font-size: 1.2rem;
                     font-weight: 700;
                     margin: 0;
+                    letter-spacing: 0.5px;
                 }
             }
 
@@ -99,14 +101,30 @@ header {
             gap: $spacing-md;
 
             li a {
-                color: $color-text-dark;
+                color: $color-text-light;
                 text-decoration: none;
                 font-size: 1.1rem;
                 font-weight: 500;
                 transition: color 0.3s ease;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: $color-accent-gold;
+                    transition: width 0.3s ease;
+                }
 
                 &:hover {
-                    color: $color-mandarin;
+                    color: $color-accent-gold;
+
+                    &::after {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -121,10 +139,11 @@ main {
 
 // Footer Styles
 footer {
-    background-color: $color-bg-dark;
-    color: $color-text-white;
+    background-color: $color-primary-gray;
+    color: $color-text-light;
     text-align: center;
-    padding: $spacing-md;
+    padding: $spacing-lg;
+    border-top: 1px solid rgba($color-accent-gold, 0.2);
 
     .social-icons {
         display: flex;
@@ -152,22 +171,22 @@ footer {
         font-size: 1.1rem;
         font-weight: 600;
         margin: $spacing-sm 0;
-        color: $color-text-white;
+        color: $color-text-light;
     }
 
     .email-address {
         font-size: 1rem;
         margin: $spacing-sm 0;
-        color: $color-text-white;
+        color: $color-text-light;
 
         a {
-            color: $color-mandarin;
+            color: $color-accent-gold;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
 
             &:hover {
-                color: color.adjust($color-mandarin, $lightness: 10%);
+                color: color.adjust($color-accent-gold, $lightness: 10%);
             }
         }
     }

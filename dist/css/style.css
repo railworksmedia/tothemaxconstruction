@@ -7,7 +7,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #000000;
+  color: #1A1A1A;
   line-height: 1.6;
   background-color: #FFFFFF;
 }
@@ -26,10 +26,11 @@ body::before {
 }
 
 header {
-  background-color: transparent;
-  padding: 0.5rem 2rem;
+  background-color: rgba(45, 45, 45, 0.85);
+  padding: 1rem 2rem;
   position: relative;
   z-index: 1000;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 header nav {
   display: flex;
@@ -57,10 +58,11 @@ header nav .logo .logo-header .logo-image {
   width: auto;
 }
 header nav .logo .logo-header h1 {
-  color: #000000;
+  color: #D4AF37;
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0;
+  letter-spacing: 0.5px;
 }
 header nav .logo .social-icons {
   display: flex;
@@ -85,14 +87,28 @@ header nav .nav-links {
   gap: 2rem;
 }
 header nav .nav-links li a {
-  color: #000000;
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
   transition: color 0.3s ease;
+  position: relative;
+}
+header nav .nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #D4AF37;
+  transition: width 0.3s ease;
 }
 header nav .nav-links li a:hover {
-  color: #d85c27;
+  color: #D4AF37;
+}
+header nav .nav-links li a:hover::after {
+  width: 100%;
 }
 
 main {
@@ -101,10 +117,11 @@ main {
 }
 
 footer {
-  background-color: #14365d;
+  background-color: #2D2D2D;
   color: #FFFFFF;
   text-align: center;
-  padding: 2rem;
+  padding: 3rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 footer .social-icons {
   display: flex;
@@ -136,13 +153,13 @@ footer .email-address {
   color: #FFFFFF;
 }
 footer .email-address a {
-  color: #d85c27;
+  color: #D4AF37;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 footer .email-address a:hover {
-  color: rgb(223.8, 124.6, 82.2);
+  color: rgb(221.024691358, 191.7901234568, 96.975308642);
 }
 footer p {
   font-size: 0.9rem;
@@ -159,7 +176,7 @@ footer p {
   }
 }
 .about-hero {
-  background-color: #14365d;
+  background-color: #2D2D2D;
   padding: 8rem 2rem;
   text-align: center;
 }
@@ -190,7 +207,7 @@ footer p {
 }
 
 .about-content {
-  background-color: #f9f6ef;
+  background-color: #FAFAFA;
   padding: 4rem 2rem;
 }
 .about-content .about-container {
@@ -213,10 +230,10 @@ footer p {
 }
 .about-content .about-container .about-card h2 {
   font-size: 1.8rem;
-  color: #000000;
+  color: #1A1A1A;
   font-weight: 600;
   margin-bottom: 2rem;
-  border-bottom: 3px solid #d85c27;
+  border-bottom: 3px solid #D4AF37;
   padding-bottom: 0.5rem;
 }
 .about-content .about-container .about-card .max-garcia-image {
@@ -230,7 +247,7 @@ footer p {
 .about-content .about-container .about-card p {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #000000;
+  color: #1A1A1A;
   margin-bottom: 2rem;
 }
 .about-content .about-container .about-card p:last-child {
@@ -243,15 +260,15 @@ footer p {
 .about-content .about-container .about-card ul li {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #000000;
+  color: #1A1A1A;
   margin-bottom: 1rem;
 }
 .about-content .about-container .about-card ul li strong {
-  color: #d85c27;
+  color: #D4AF37;
 }
 
 .contact-hero {
-  background-color: #14365d;
+  background-color: #2D2D2D;
   padding: 8rem 2rem;
   text-align: center;
 }
@@ -308,17 +325,17 @@ footer p {
 }
 .contact-info .contact-container .contact-card h2 {
   font-size: 1.3rem;
-  color: #000000;
+  color: #1A1A1A;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 .contact-info .contact-container .contact-card p {
   font-size: 1.1rem;
-  color: #000000;
+  color: #1A1A1A;
   margin-bottom: 1rem;
 }
 .contact-info .contact-container .contact-card .contact-link {
-  color: #d85c27;
+  color: #D4AF37;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -327,7 +344,7 @@ footer p {
   overflow-wrap: break-word;
 }
 .contact-info .contact-container .contact-card .contact-link:hover {
-  color: rgb(172.8, 73.6, 31.2);
+  color: rgb(177.7777777778, 144.8888888889, 38.2222222222);
 }
 .contact-info .contact-container .contact-card .contact-note {
   font-size: 0.9rem;
@@ -416,20 +433,25 @@ footer p {
   color: #FFFFFF;
   padding: 4rem;
   max-width: 700px;
-  background: linear-gradient(to right, rgba(20, 54, 93, 0.95), rgba(20, 54, 93, 0.7));
-  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(45, 45, 45, 0.8) 0%, rgba(74, 74, 74, 0.75) 100%);
+  border-radius: 12px;
+  border-left: 4px solid #D4AF37;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 .hero-section .hero-content h1 {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.3;
   margin-bottom: 2rem;
+  color: #D4AF37;
+  letter-spacing: -0.5px;
 }
 .hero-section .hero-content p {
   font-size: 1.1rem;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.95);
 }
 .hero-section .hero-content .service-area {
   font-size: 0.95rem;
@@ -455,21 +477,26 @@ footer p {
   margin: 0;
 }
 .hero-section .hero-phone-cta {
-  background-color: #d85c27;
-  color: #FFFFFF;
+  background: linear-gradient(135deg, rgba(45, 45, 45, 0.8) 0%, rgba(74, 74, 74, 0.75) 100%);
+  color: #D4AF37;
   font-size: 1.1rem;
   font-weight: 600;
-  padding: 0.5rem 1rem;
-  border: 4px solid #FFFFFF;
-  outline: 4px solid #d85c27;
-  border-radius: 6px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  padding: 1rem 3rem;
+  border: 4px solid #D4AF37;
+  outline: 4px solid rgba(45, 45, 45, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   text-decoration: none;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   white-space: nowrap;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  cursor: pointer;
 }
 .hero-section .hero-phone-cta:hover {
-  transform: scale(1.05);
+  background: linear-gradient(135deg, rgba(45, 45, 45, 0.9) 0%, rgba(74, 74, 74, 0.85) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 768px) {
   .hero-section {
@@ -503,8 +530,8 @@ footer p {
 }
 
 .services-section {
-  background-color: #14365d;
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #FAFAFA 0%, #F2F2F2 100%);
+  color: #1A1A1A;
   padding: 4rem 2rem;
   position: relative;
 }
@@ -517,34 +544,37 @@ footer p {
 }
 .services-section .services-container .service-item {
   flex: 1;
-  text-align: left;
-  padding: 0 2rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  padding: 3rem;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #D4AF37;
 }
-.services-section .services-container .service-item:last-child {
-  border-right: none;
-}
-.services-section .services-container .service-item:first-child {
-  padding-left: 0;
+.services-section .services-container .service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 .services-section .services-container .service-item .service-icon {
   width: 80px;
   height: 80px;
-  margin: 0 auto 0.5rem auto;
+  margin: 0 auto 2rem auto;
   display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 .services-section .services-container .service-item h2 {
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-align: center;
+  color: #2D2D2D;
 }
 .services-section .services-container .service-item p {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #757575;
 }
 @media (max-width: 768px) {
   .services-section .services-container {
@@ -588,14 +618,14 @@ footer p {
 .image-text-section .image-text-container .text-column h2 {
   font-size: 1.8rem;
   margin-bottom: 2rem;
-  color: #000000;
+  color: #1A1A1A;
   font-weight: 600;
   line-height: 1.3;
 }
 .image-text-section .image-text-container .text-column p {
   font-size: 1rem;
   line-height: 1.7;
-  color: #000000;
+  color: #1A1A1A;
 }
 @media (max-width: 768px) {
   .image-text-section .image-text-container {
@@ -605,7 +635,7 @@ footer p {
 }
 
 .portfolio-section {
-  background-color: #14365d;
+  background-color: #1A1A1A;
   padding: 4rem 2rem;
 }
 .portfolio-section .portfolio-header {
@@ -674,7 +704,7 @@ footer p {
 .renovation-section .renovation-container h2 {
   font-size: 2rem;
   margin-bottom: 3rem;
-  color: #000000;
+  color: #1A1A1A;
   font-weight: 600;
 }
 .renovation-section .renovation-container .renovation-list {
@@ -687,7 +717,7 @@ footer p {
 }
 .renovation-section .renovation-container .renovation-list .renovation-item {
   font-size: 1.1rem;
-  color: #000000;
+  color: #1A1A1A;
   font-weight: 400;
   position: relative;
   padding-left: 2rem;
@@ -697,7 +727,7 @@ footer p {
   content: "•";
   position: absolute;
   left: 0;
-  color: #d85c27;
+  color: #D4AF37;
   font-size: 1.5rem;
   line-height: 1;
 }
@@ -713,7 +743,7 @@ footer p {
 }
 
 .cta-section {
-  background-color: #14365d;
+  background-color: #2D2D2D;
   padding: 4rem 2rem;
 }
 .cta-section .cta-container {
@@ -724,13 +754,13 @@ footer p {
   align-items: center;
 }
 .cta-section .cta-container .cta-box {
-  background-color: #d85c27;
+  background-color: #D4AF37;
   color: #FFFFFF;
   font-size: 1.1rem;
   font-weight: 600;
   padding: 1rem 2rem;
   border: 4px solid #FFFFFF;
-  outline: 4px solid #d85c27;
+  outline: 4px solid #D4AF37;
   border-radius: 6px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -743,7 +773,7 @@ footer p {
 }
 
 .reviews-section {
-  background-color: #f9f6ef;
+  background-color: #FAFAFA;
   padding: 4rem 2rem;
 }
 .reviews-section .reviews-container {
@@ -771,7 +801,7 @@ footer p {
 }
 .reviews-section .reviews-container .reviews-header h2 {
   font-size: 2rem;
-  color: #000000;
+  color: #1A1A1A;
   font-weight: 600;
   margin: 0;
 }
@@ -801,7 +831,7 @@ footer p {
 .reviews-section .reviews-container .reviews-grid .review-card .review-text {
   font-size: 0.85rem;
   line-height: 1.6;
-  color: #000000;
+  color: #1A1A1A;
 }
 @media (max-width: 1024px) {
   .reviews-section .reviews-container .reviews-grid {
@@ -849,13 +879,13 @@ footer p {
 }
 .hgtv-section .hgtv-container .hgtv-content h3 {
   font-size: 1.8rem;
-  color: #000000;
+  color: #1A1A1A;
   font-weight: 600;
   margin: 0 0 1rem 0;
 }
 .hgtv-section .hgtv-container .hgtv-content p {
   font-size: 1.1rem;
-  color: #000000;
+  color: #1A1A1A;
   margin: 0.5rem 0;
   font-weight: 500;
 }
@@ -893,6 +923,46 @@ footer p {
 }
 .animate-slide-right.in-view {
   animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+.logo-section {
+  background-color: #000000;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-section .logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+}
+.logo-section .logo-container .logo-tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  order: -1;
+}
+.logo-section .logo-container .section-logo {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .logo-section .logo-container {
+    gap: 1rem;
+  }
+  .logo-section .logo-container .section-logo {
+    height: 100px;
+  }
+  .logo-section .logo-container .logo-tagline {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

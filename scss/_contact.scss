@@ -6,14 +6,14 @@
 
 // Contact Hero Section
 .contact-hero {
-    background-color: $color-night-moon;
+    background-color: $color-primary-gray;
     padding: $spacing-xl * 2 $spacing-md;
     text-align: center;
 
     .contact-hero-content {
         max-width: 800px;
         margin: 0 auto;
-        color: $color-text-white;
+        color: $color-text-light;
 
         h1 {
             font-size: 3rem;
@@ -83,7 +83,7 @@
             }
 
             .contact-link {
-                color: $color-mandarin;
+                color: $color-accent-gold;
                 text-decoration: none;
                 font-weight: 600;
                 font-size: 1.1rem;
@@ -92,7 +92,7 @@
                 overflow-wrap: break-word;
 
                 &:hover {
-                    color: color.adjust($color-mandarin, $lightness: -10%);
+                    color: color.adjust($color-accent-gold, $lightness: -10%);
                 }
             }
 
